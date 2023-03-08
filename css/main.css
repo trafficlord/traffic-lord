@@ -1862,7 +1862,8 @@ iframe {
     height: 100%;
 }
 
-.tariffs__heading_modal, .select-media-box, .tariff_buy.modal-button-box, .modal-price {
+.tariffs__heading_modal, .select-media-box, .tariff_buy.modal-button-box, .modal-price,
+.advantages .container:after, .advantages .container:before {
     display: none;
 }
 
