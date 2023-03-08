@@ -1698,11 +1698,11 @@ p:last-child{
 }
 
 .middle_tariffs_box .first__line_main {
-    top: 610px;
+    top: 690px;
 }
 
 .middle_tariffs_box.second .first__line_main {
-    top: 1215px;
+    top: 1380px;
 }
 
 .pay_tariff_modal {
@@ -1862,7 +1862,7 @@ iframe {
     height: 100%;
 }
 
-.tariffs__heading, .select-media-box, .tariff_buy.modal-button-box {
+.tariffs__heading_modal, .select-media-box, .tariff_buy.modal-button-box, .modal-price {
     display: none;
 }
 
