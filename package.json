@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  },
+  "scripts": {
+    "deploy": "npm run build && gh-pages -d dist --repo https://github.com/trafficlord/traffic-lord.git"
+  },
+  "dependencies": {
+    "build": "^0.1.4"
+  }
+}
