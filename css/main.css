@@ -1733,7 +1733,7 @@ p:last-child{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 95%;
+    height: 100%;
 }
 
 .type-to-connect {
@@ -1819,6 +1819,9 @@ p:last-child{
 .close-modal-box {
     display: flex;
     justify-content: flex-end;
+    position: fixed;
+    right: 19px;
+    top: 40px;
 }
 
 .close-modal-wrapper {
