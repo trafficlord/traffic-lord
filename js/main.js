@@ -38,17 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     groupPayButton.addEventListener('click', () => {
         groupModal.classList.remove('hidden')
-        document.body.style.overflowY = 'hidden'
-        document.getElementsByTagName('html')[0].style.overflowY = 'hidden'
-        document.body.style.maxHeight = '100%'
+        document.getElementsByClassName('block_for_scroll')[0].style.overflowY = 'hidden'
         wrapper.style.filter = 'blur(20px)'
     })
 
     groupCloseModalButton.addEventListener('click', () => {
         groupModal.classList.add('hidden')
-        document.body.style.overflowY = 'scroll'
-        document.getElementsByTagName('html')[0].style.overflowY = 'scroll'
-        document.body.style.maxHeight = 'auto'
+        document.getElementsByClassName('block_for_scroll')[0].style.overflowY = 'scroll'
         wrapper.style.filter = 'blur(0)'
     })
 
@@ -58,17 +54,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     privatePayButton.addEventListener('click', () => {
         privateModal.classList.remove('hidden')
-        document.body.style.overflowY = 'hidden'
-        document.getElementsByTagName('html')[0].style.overflowY = 'hidden'
-        document.body.style.maxHeight = '100%'
+        document.getElementsByClassName('block_for_scroll')[0].style.overflowY = 'hidden'
         wrapper.style.filter = 'blur(20px)'
     })
 
     privateCloseModalButton.addEventListener('click', () => {
         privateModal.classList.add('hidden')
-        document.body.style.overflowY = 'scroll'
-        document.getElementsByTagName('html')[0].style.overflowY = 'scroll'
-        document.body.style.maxHeight = 'auto'
+        document.getElementsByClassName('block_for_scroll')[0].style.overflowY = 'scroll'
         wrapper.style.filter = 'blur(0)'
     })
 
@@ -79,9 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             && !target.closest('.pay_tariff_modal_private') && !target.closest('.tariff_buy')) {
             groupModal.classList.add('hidden')
             privateModal.classList.add('hidden')
-            document.body.style.overflowY = 'scroll'
-            document.getElementsByTagName('html')[0].style.overflowY = 'scroll'
-            document.body.style.maxHeight = 'auto'
+            document.getElementsByClassName('block_for_scroll')[0].style.overflowY = 'scroll'
             wrapper.style.filter = 'blur(0)'
         }
     })
