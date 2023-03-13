@@ -1723,6 +1723,10 @@ p:last-child{
     opacity: 1;
 }
 
+.block_for_scroll {
+    max-height: 100vh;
+}
+
 .pay_tariff_modal.hidden {
     opacity: 0;
     transition: visibility 0s .3s, opacity .3s ease;
