@@ -1723,8 +1723,9 @@ p:last-child{
     opacity: 1;
 }
 
-.block_for_scroll {
-    max-height: 100vh;
+.wrapper {
+    position: relative;
+    max-height: 100%;
 }
 
 .pay_tariff_modal.hidden {

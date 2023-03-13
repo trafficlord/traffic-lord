@@ -38,13 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     groupPayButton.addEventListener('click', () => {
         groupModal.classList.remove('hidden')
-        document.getElementsByClassName('block_for_scroll')[0].style.overflowY = 'hidden'
+        wrapper.style.maxHeight = '100vh'
+        wrapper.style.overflowY = 'hidden'
+        wrapper.classList.add('no-scrolled')
         wrapper.style.filter = 'blur(20px)'
     })
 
     groupCloseModalButton.addEventListener('click', () => {
         groupModal.classList.add('hidden')
-        document.getElementsByClassName('block_for_scroll')[0].style.overflowY = 'scroll'
+        wrapper.style.maxHeight = '100%'
+        wrapper.style.overflowY = 'scroll'
+        wrapper.classList.remove('no-scrolled')
         wrapper.style.filter = 'blur(0)'
     })
 
@@ -54,13 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     privatePayButton.addEventListener('click', () => {
         privateModal.classList.remove('hidden')
-        document.getElementsByClassName('block_for_scroll')[0].style.overflowY = 'hidden'
+        wrapper.style.maxHeight = '100vh'
+        wrapper.style.overflowY = 'hidden'
+        wrapper.classList.add('no-scrolled')
         wrapper.style.filter = 'blur(20px)'
     })
 
     privateCloseModalButton.addEventListener('click', () => {
         privateModal.classList.add('hidden')
-        document.getElementsByClassName('block_for_scroll')[0].style.overflowY = 'scroll'
+        wrapper.style.maxHeight = '100%'
+        wrapper.style.overflowY = 'scroll'
+        wrapper.classList.remove('no-scrolled')
         wrapper.style.filter = 'blur(0)'
     })
 
@@ -68,10 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('click', e => {
         const target = e.target
         if (!target.closest('.pay_tariff_modal_group') && !target.closest('.tariff_buy')
-            && !target.closest('.pay_tariff_modal_private') && !target.closest('.tariff_buy')) {
+            && !target.closest('.pay_tariff_modal_private') && !target.closest('.tariff_buy')
+            && wrapper.classList.contains('no-scrolled')) {
             groupModal.classList.add('hidden')
             privateModal.classList.add('hidden')
-            document.getElementsByClassName('block_for_scroll')[0].style.overflowY = 'scroll'
+            wrapper.style.maxHeight = '100%'
+            wrapper.style.overflowY = 'scroll'
+            wrapper.classList.remove('no-scrolled')
             wrapper.style.filter = 'blur(0)'
         }
     })
