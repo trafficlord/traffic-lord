@@ -39,12 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
     groupPayButton.addEventListener('click', () => {
         groupModal.classList.remove('hidden')
         document.body.style.overflowY = 'hidden'
+        document.body.style.maxHeight = '100%'
         wrapper.style.filter = 'blur(20px)'
     })
 
     groupCloseModalButton.addEventListener('click', () => {
         groupModal.classList.add('hidden')
         document.body.style.overflowY = 'scroll'
+        document.body.style.maxHeight = 'auto'
         wrapper.style.filter = 'blur(0)'
     })
 
@@ -55,12 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
     privatePayButton.addEventListener('click', () => {
         privateModal.classList.remove('hidden')
         document.body.style.overflowY = 'hidden'
+        document.body.style.maxHeight = '100%'
         wrapper.style.filter = 'blur(20px)'
     })
 
     privateCloseModalButton.addEventListener('click', () => {
         privateModal.classList.add('hidden')
         document.body.style.overflowY = 'scroll'
+        document.body.style.maxHeight = 'auto'
         wrapper.style.filter = 'blur(0)'
     })
 
@@ -72,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             groupModal.classList.add('hidden')
             privateModal.classList.add('hidden')
             document.body.style.overflowY = 'scroll'
+            document.body.style.maxHeight = 'auto'
             wrapper.style.filter = 'blur(0)'
         }
     })
